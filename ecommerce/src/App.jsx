@@ -13,7 +13,7 @@ const App = () => {
       delay: 100,
     });
   }, []);
-
+console.log("hello")
   return <div>
       <Navbar />
       <Hero />
