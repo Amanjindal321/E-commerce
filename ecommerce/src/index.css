@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .search-bar {
+         @apply w-[300px] sm:w-[700px] /*group-hover:w-[400px] transition-all duration-300 */
+         rounded-full border border-gray-500
+        px-6 py-1 focus:outline-none dark:border-gray-800 dark:bg-gray-900 group-hover:dark:bg-gray-800;
+    }
+
+}
+
