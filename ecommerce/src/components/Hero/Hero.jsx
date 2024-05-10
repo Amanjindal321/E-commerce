@@ -66,11 +66,24 @@ const Hero = () => {
           <div className='flex flex-col justify-center items-center gap-4 pt-10
           sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10'>
 
-        <h1 className='text-5xl sm:text-6xl lg:text-4xl font-bold'>{data.title}</h1>
-        <p className='text-sm'>
+        <h1 
+          data-aos="zoom-out"
+          data-aos-once="true"
+          data-aos-duration="500" 
+          className='text-5xl sm:text-6xl lg:text-4xl font-bold'>{data.title}</h1>
+        <p 
+          data-aos="zoom-out"
+          data-aos-duration="500"
+          data-aos-delay="200"
+          className='text-sm'
+        >
           {data.description}
         </p>
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="300"
+        >
           <button className='bg-black text-white py-2 px-4 hover:bg-gray-500 duration-200 text-white py-2 px-4 rounded-full'>
             Shop Now
           </button>
@@ -78,7 +91,11 @@ const Hero = () => {
       </div>
       {/* Image section */}
       <div className='order-1 sm:order-2'>
-        <div className='relative z-10'>
+        <div
+         data-aos="zoom-in"
+         data-aos-once="true"
+         className='relative z-10'
+         >
           <img src={data.img} alt="" className='w-[400px] h-[300px] sm:h-
           [450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-cover mx-auto'/>
         </div>
