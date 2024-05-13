@@ -1,7 +1,10 @@
 import React from 'react'
 import Img1 from '../../assets/shirt1.png';
-import Img2 from '../../assets/shirt3.png';
-import Img3 from '../../assets/shirt2.png';
+import Img2 from '../../assets/shirt2.png';
+import Img3 from '../../assets/shirt3.png';
+import Img4 from '../../assets/shirt5.png';
+
+import { FaStar } from 'react-icons/fa6';
 
 const ProductsData = [
     {
@@ -23,6 +26,14 @@ const ProductsData = [
         description: "Off on Casual wears",
     
     },
+    {
+        id: 4,
+        img: Img4,
+        title: "Casual Wears",
+        description: "Off on Casual wears",
+    
+    },
+    
 ]
 const TopProducts = () => {
   return (
@@ -41,18 +52,29 @@ const TopProducts = () => {
               </p>
             </div>
             {/* Body section */}
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-20 md:gap-5 place-items-center'>
                 {ProductsData.map((data) => (
-                        <div className='rounded-2xl bg-gray-100 dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-gray-900 hover:text-white relative shadow-xl duration-300 group max-w-[300px]'> 
+                        <div data-aos="zoom-in" 
+                          key={data.id} className='rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-gray-900 hover:text-white relative shadow-xl duration-300 group max-w-[300px]'> 
                             {/* image section */}
                             <div className='h-[100px]'>
-                                <img src={data.img} alt="" className='max-w-[140px] mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md'/>
+                                <img src={data.img} alt="" className='max-w-[190px] mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md'/>
                             </div>
-                            {/* text section */}
-                            {/* <div>
-                                <h1>{data.title}</h1>
-                                <p>{data.description}</p>
-                            </div> */}
+                           {/* details section */}
+                            <div className='p-4 text-center'>
+                              {/* star rating */}
+                              <div className='w-full flex items-center justify-center gap-1'>
+                                <FaStar className='text-yellow-500'/>
+                                <FaStar className='text-yellow-500'/>
+                                <FaStar className='text-yellow-500'/>
+                                <FaStar className='text-yellow-500'/>
+                              </div>
+                              <h1 className='text-xl font-bold'>{data.title}</h1>
+                              <p className='text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2'>{data.description}</p>
+                              <button className='bg-yellow-500 hover:scale-105 duration-300 text-white py-1 p-4 rounded-full mt-4 group-hover:bg-white group-hover:text-yellow-500'>
+                                Buy Now
+                              </button>
+                            </div>
                         </div>
                     ))}
             </div>
