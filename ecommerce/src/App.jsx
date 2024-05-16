@@ -8,6 +8,7 @@ import Banner from './components/Banner/Banner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from './components/Testimonials/Testimonials';
+import Subscribe from './components/Subscribe/Subscribe';
 const App = () => {
   React.useEffect(() => {
     AOS.init({
@@ -24,6 +25,7 @@ const App = () => {
       <Products />
       <TopProducts />
       <Banner />
+      <Subscribe />
       <Testimonials />
       <Products />
       

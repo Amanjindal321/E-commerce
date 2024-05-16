@@ -58,8 +58,6 @@ const Testimonials = () => {
                 infinite: true,
               },
             },
-            
-            
         ],
     };
   return (
