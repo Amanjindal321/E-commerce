@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from './components/Testimonials/Testimonials';
 import Subscribe from './components/Subscribe/Subscribe';
+import Footer from './components/Footer/Footer';
+
 const App = () => {
   React.useEffect(() => {
     AOS.init({
@@ -28,7 +30,7 @@ const App = () => {
       <Subscribe />
       <Testimonials />
       <Products />
-      
+      <Footer />
     </div>;
   
 };
